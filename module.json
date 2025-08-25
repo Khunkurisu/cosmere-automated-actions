@@ -1,51 +1,50 @@
 {
-  "id": "module",
-  "title": "New Module",
-  "description": "",
+  "id": "cosmere-automated-actions",
+  "title": "Cosmere Automated Actions",
+  "description": "A Module to add automations for some of cosmere's more manual actions",
   "version": "#{VERSION}#",
   "library": "false",
   "manifestPlusVersion": "1.2.0",
-  "compatibility": {
-    "minimum": 10,
-    "verified": 10,
-    "maximum": 11
-  },
   "authors": [
     {
-      "name": "The League of Extraordinary FVTT Developers",
-      "url": "https://github.com/League-of-Foundry-Developers",
-      "discord": "discordID#0001"
+    "name": "Cyprian",
+    "url": "https://github.com/CyprianStream"
+    }
+  ],
+  "url": "https://github.com/CyprianStream/cosmere-automated-actions/",
+  "manifest": "https://github.com/CyprianStream/cosmere-automated-actions/releases/download/v0.1.2/module.json",
+  "download": "https://github.com/CyprianStream/cosmere-automated-actions/releases/download/0.1.2/module.zip",
+  "compatibility": {
+    "minimum": "12",
+    "verified": "12"
+  },
+  "esmodules": [
+    "scripts/main.js"
+  ],
+  "packs": [
+    {
+      "name": "caa-compendium",
+      "label": "CAA Compendium",
+      "path": "packs/caa-compendium",
+      "type": "Item",
+      "system": "cosmere-rpg",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      }
     }
   ],
   "relationships": {
-    "systems": [],
-    "requires": []
-  },
-  "esmodules": [
-    "scripts/module.js"
-  ],
-  "scripts": [
-    "scripts/lib/lib.js"
-  ],
-  "styles": [
-    "styles/module.css"
-  ],
-  "languages": [
-    {
-      "lang": "en",
-      "name": "English",
-      "path": "languages/en.json"
-    }
-  ],
-  "url": "#{URL}#",
-  "manifest": "#{MANIFEST}#",
-  "download": "#{DOWNLOAD}#",
-  "license": "LICENSE",
-  "readme": "README.md",
-  "media": [
-    {
-      "type": "icon",
-      "url": "https://avatars2.githubusercontent.com/u/71292812?s=400&u=ccdb4eeb7abf551ca8f314e5a9bfd0479a4d3d41&v=4"
-    }
-  ]
+    "requires": [],
+    "systems": [
+      {
+        "id": "cosmere-rpg",
+        "type": "system",
+        "compatibility": {
+          "minimum": "1",
+          "verified": "1"
+        }
+      }
+    ]
+  }
 }
