@@ -18,9 +18,6 @@
     "minimum": "12",
     "verified": "12"
   },
-  "esmodules": [
-    "scripts/main.js"
-  ],
   "packs": [
     {
       "name": "caa-compendium",
@@ -35,7 +32,24 @@
     }
   ],
   "relationships": {
-    "requires": [],
+    "requires": [
+      {
+        "id": "cosmere-rpg-stormlight-handbook",
+        "type": "module",
+        "compatibility": {
+          "minimum": "1",
+          "verified": "1"
+        }
+      },
+      {
+        "id": "cosmere-rpg-stormlight-worldguide",
+        "type": "module",
+        "compatibility": {
+          "minimum": "1",
+          "verified": "1"
+        }
+      }
+    ],
     "systems": [
       {
         "id": "cosmere-rpg",
